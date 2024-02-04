@@ -64,11 +64,7 @@ module.exports.createTask = async function (req, res) {
     user.tasks.unshift(task.authorId);
     await user.save();
     res.status(201).json({
-      "Task-id": task._id,
-      Title: task.title,
-      Description: task.description,
-      Priority: task.priority,
-      "Created Time(UTC)": task.createdAt,
+      task
     });
   } catch (error) {
     res.json({ error: error.message });

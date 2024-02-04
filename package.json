@@ -1,15 +1,26 @@
 {
-  "name": "letsendorsebackendassignment",
+  "name": "one-percent-todo-list",
   "version": "1.0.0",
-  "description": "",
+  "description": "a todolist which will help you to improve",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "dev": "npx nodemon ./backend/app"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.3.2",
+    "chart.js": "^4.4.1",
+    "cookies": "^0.9.1",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-cookie": "^7.0.2",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
     "bcrypt": "^5.1.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
@@ -18,5 +29,17 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.8.4",
     "nodemon": "^2.0.20"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
