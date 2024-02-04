@@ -22,11 +22,13 @@ mongoose
     console.log(err);
   });
 
-const getHomePage = require("./Router/getHomePage");
-app.use("/api", getHomePage);
-
 const userRouter = require("./Router/userRouter");
 app.use("/api/user", userRouter);
 
 const taskRouter = require("./Router/taskRouter");
 app.use("/api/task", taskRouter);
+
+const getHomePage = require("./Router/getHomePage");
+app.use("/api", getHomePage);
+
+app.use((req, res) => res.redirect("/api"));
