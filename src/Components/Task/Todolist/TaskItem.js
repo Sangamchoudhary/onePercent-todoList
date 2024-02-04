@@ -5,7 +5,7 @@ import "./TaskItem.css";
 const TaskItem = ({ task }) => {
   const { _id, title, description, date, priority, isComplete } = task;
   const context = useContext(TaskContext);
-  const { deleteTask, completeTask, getTasks } = context;
+  const { deleteTask, completeTask } = context;
   const originalDate = new Date(date);
   const formattedDate = `${originalDate.getFullYear()}-${String(
     originalDate.getMonth() + 1
@@ -23,7 +23,7 @@ const TaskItem = ({ task }) => {
 
   return (
     <div
-      class="task-item card border-dark bg-info-subtle mb-3"
+      className={`task-item card border-dark bg-${isComplete ? "success" : "info"}-subtle mb-3`}  
       style={{ maxWidth: "23rem" }}
     >
       <div class="card-header bg-transparent border-secondary">
